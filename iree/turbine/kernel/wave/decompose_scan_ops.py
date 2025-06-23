@@ -1,6 +1,6 @@
 import math
 from operator import ge
-from typing import Any, Callable
+from typing import Callable
 
 import torch.fx as fx
 

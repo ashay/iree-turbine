@@ -94,14 +94,13 @@ from ...ops.wave_ops import (
     workgroup_barrier,
     softsign,
 )
-from ...compiler.base import CodegenError, ValidationError, NDEBUG
+from ...compiler.base import CodegenError, ValidationError
 from ...compiler.builder import IRProxyValue
 from ...compiler.vector_codegen import (
     cast_py_literal,
     cast_py_value,
     cast_vector,
 )
-from ...compiler.utils import strides_from_symbolic_shape
 from ..constraints import HardwareConstraint, GenericDot
 from ..utils.classes import ShuffleMode
 from ..utils.general_utils import get_fastest_index

@@ -6,7 +6,7 @@
 
 from ..._support.tracing import CapturedTrace
 from ..._support.dtype import DataType
-from typing import Sequence, Type, Any
+from typing import Sequence, Any
 from ..constraints import (
     Constraint,
 )
@@ -24,8 +24,6 @@ from ...ops.wave_ops import (
     GetResult,
     MMA,
     SetSymbol,
-    ApplyExpr,
-    Broadcast,
 )
 from ..._support.indexing import IndexingContext, IndexSymbol
 import itertools

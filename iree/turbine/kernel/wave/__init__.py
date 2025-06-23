@@ -8,4 +8,3 @@ from ..ops.wave_ops import *
 from .assumptions import *
 from .constraints import *
 from .wave import *
-from .wave import IndexMapping

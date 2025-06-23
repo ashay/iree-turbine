@@ -9,10 +9,10 @@ from sympy.utilities.lambdify import lambdastr
 from itertools import chain
 import iree.turbine.kernel.lang as tkl
 from ..compiler import builder, dispatch_codegen, kernel_codegen
-from ..lang import Grid, IndexMapping
+from ..lang import Grid
 from ..lang.global_symbols import *
 from ..ops import wave_ops
-from ..ops.wave_ops import Iterate, CustomOp, get_custom, IterArg
+from ..ops.wave_ops import Iterate, CustomOp, get_custom
 from .._support.indexing import IndexingContext, IndexExpr
 from .symbolic_constraints import SymbolicAlias
 from .._support.tracing import (
@@ -44,7 +44,6 @@ from .analysis.partition_strided_operators import (
     partition_strided_operators,
 )
 from .barriers import add_shared_memory_barriers
-from .codegen import WaveEmitter
 from .compile_options import WaveCompileOptions
 from .decompose_reduce_ops import decompose_reduce_ops
 from .decompose_vmma_ops import decompose_vmma_ops
@@ -79,7 +78,7 @@ from .utils.general_utils import (
 )
 
 # Others
-from typing import Any, Callable, Dict, Optional, Sequence
+from typing import Any, Callable, Optional, Sequence
 import torch.fx as fx
 import inspect
 import sympy
