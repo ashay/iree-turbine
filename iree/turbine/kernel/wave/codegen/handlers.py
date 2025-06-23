@@ -445,7 +445,7 @@ def handle_atomic_op(op):
                 # TODO: To support float types, MLIR LLVM dialect needs to be updated with
                 # float types. LLVM already supports fmin and fmax (https://llvm.org/docs/LangRef.html#atomicrmw-instruction)
                 # and thus atomicrmw operation in MLIR dialect needs to target those instructions with "workgroup" scope.
-                raise NotImplementedError(f"Atomic ops don't support float types yet\n")
+                raise NotImplementedError("Atomic ops don't support float types yet\n")
 
             lhs = lhs.ir_value
             rhs = rhs.ir_value

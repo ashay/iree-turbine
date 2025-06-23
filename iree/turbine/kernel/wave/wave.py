@@ -525,7 +525,7 @@ class LaunchableWave(Launchable):
             or "trace" in print_ir_after
             or "first" in print_ir_before
         ):
-            print(f"***After trace/Before first pass***\n")
+            print("***After trace/Before first pass***\n")
             print_trace(trace)
 
         # Initial passes, pre-optimization.
@@ -598,7 +598,7 @@ class LaunchableWave(Launchable):
                 pass_times.items(), key=lambda x: x[1], reverse=True
             )
 
-            print(f"Pass times:")
+            print("Pass times:")
             for k, v in pass_times_list:
                 print(f"    {k}: {v:.4f}s")
 

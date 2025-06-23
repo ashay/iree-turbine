@@ -101,7 +101,7 @@ def benchmark_sdpa(
         4 * batch_size * num_heads * seq_len_q * seq_len_k * head_dim
     ) / avg_time
 
-    print(f"\nBenchmark Results for BHSD shapes:")
+    print("\nBenchmark Results for BHSD shapes:")
     print(f"Batch size: {batch_size}")
     print(f"Number of heads: {num_heads}")
     print(f"Query sequence length: {seq_len_q}")

@@ -260,7 +260,7 @@ def set_node_indices(
         or "first" in print_ir_before
     ):
         print(
-            f"***After set_thread_independent_index/Before set_thread_dependent_index pass***\n"
+            "***After set_thread_independent_index/Before set_thread_dependent_index pass***\n"
         )
         print_trace(trace)
 

@@ -57,7 +57,7 @@ def get_extend_attention_kernel(
     ), f"Expected seq to be int but got: {wave_size_dtype}"
     assert not (
         is_causal and use_custom_mask
-    ), f"Cannot have both causal and custom mask at the same time"
+    ), "Cannot have both causal and custom mask at the same time"
 
     S = tkl.sym.S
     EXT_IDX = tkl.sym.EXT_IDX

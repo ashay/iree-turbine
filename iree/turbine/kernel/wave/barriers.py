@@ -39,7 +39,7 @@ def add_shared_memory_barriers(
             if last_node is None:
                 last_node = custom
                 continue
-            if type(custom) != type(last_node) and not is_barrier_between(
+            if type(custom) is not type(last_node) and not is_barrier_between(
                 last_node.fx_node, custom.fx_node
             ):
                 # Synchronize after the write to shared memory before we read from it.

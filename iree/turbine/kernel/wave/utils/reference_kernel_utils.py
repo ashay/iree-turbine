@@ -40,7 +40,7 @@ def scaled_dot_product_attention_bhsd(
     attn_logits: Tensor = torch.matmul(query, key.transpose(-2, -1)) * scale
 
     if sliding_window >= 0:
-        assert is_causal, f"Sliding window only supported with causal"
+        assert is_causal, "Sliding window only supported with causal"
 
     if is_causal:
         seq_len_q, seq_len_k = attn_logits.shape[-2], attn_logits.shape[-1]
